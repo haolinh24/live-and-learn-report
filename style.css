@@ -1,0 +1,47 @@
+.cover {
+  width: 100vw;
+  max-height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+img {
+  width: 100vw;
+  height: 100vh;
+}
+.big_title {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+}
+.toanquoc_pm, .toanquoc_pm_graph{
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-top: 10vh;
+}
+.toanquoc_map_text, .toanquoc_graph_text {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+p {
+  padding-left: 1em;
+  border-left: 0.5em solid #fdbb84
+}
+.toanquoc_map, .toanquoc_graph {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.toanquoc_pm_graph {
+  display: none;
+}
+
+h1, h2, p {
+  font-family: 'Merriweather Sans', sans-serif;
+}
