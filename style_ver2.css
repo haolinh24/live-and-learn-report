@@ -1,0 +1,218 @@
+.cover {
+  width: 100vw;
+  max-height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+.img_cover {
+  width: 100vw;
+  height: 100vh;
+}
+.big_title {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+}
+
+h1, h2, p {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+.title {
+  font-size: 1.5em;
+  font-stretch: extra-condensed;
+  margin-top: 10vh;
+  border-bottom: solid 3px coral;
+}
+.sub_title, .title{
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.sub_title {
+  font-size: 1.2em;
+}
+.caption {
+  font-weight: bold;
+  font-size: 0.8em;
+}
+.tq_time_space {
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 0.5fr;
+  grid-template-rows: 1fr 1fr;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.tq_2019 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+.tq_text {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  align-self: center;
+  font-family: 'Merriweather', serif;
+}
+.tq_2020 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+.tq_dothi {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.map_dothi {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.img_viz {
+  width: 98%;
+}
+.graph_dothi {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.tq_2020_dothi {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.tq_dothi_text {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  align-self: center;
+  font-family: Merriweather;
+  margin-right: 2vw;
+}
+.mien_bac, .mien_bac_tram, .mien_bac_ss {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  grid-template-rows: 1fr;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  align-items: center;
+  margin-top: 30px;
+}
+#mien_bac_tram {
+  display: none;
+}
+.bac_text p, .bac_tram_text p, .bac_ss_text {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  font-family: Merriweather;
+}
+.bac_map, .bac_dots, .bac_dots {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+button {
+  margin-top: 10px;
+}
+
+/* slideshow style */
+.slideshow_container_bac {
+  max-width: 1400px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlide_bac {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 3em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+/* .prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+} */
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* end slideshow */
+.sub_head {
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 10vh;
+}
+.instruction_cap {
+  font-style: italic;
+  font-size: 0.8em;
+}
+/* mien trung */
+.mien_trung, .mien_trung_tram, .mien_trung_ss {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  grid-template-rows: 1fr;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.trung_text, .trung_tram_text, .trung_ss_text {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  align-self: center;
+}
+.trung_text p, .trung_tram_text p, .trung_ss_text {
+  font-family: Merriweather;
+}
+.trung_map, .trung_tram_map, .trung_dots {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
