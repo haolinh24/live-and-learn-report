@@ -62,7 +62,7 @@ h1, h2, p {
 }
 .tq_dothi {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 0.5fr;
   grid-template-rows: 1.5fr 1fr;
   justify-content: center;
   margin-left: 10%;
@@ -70,19 +70,13 @@ h1, h2, p {
 }
 .map_dothi {
   grid-column: 2/3;
-  grid-row: 1/2;
-}
-.img_viz {
-  width: 98%;
+  grid-row: 1/3;
 }
 .graph_dothi {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-.tq_2020_dothi {
   grid-column: 3/4;
-  grid-row: 1/2;
+  grid-row: 1/3;
 }
+
 .tq_dothi_text {
   grid-column: 1/2;
   grid-row: 1/3;
