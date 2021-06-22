@@ -62,7 +62,7 @@ h1, h2, p {
 }
 .tq_dothi {
   display: grid;
-  grid-template-columns: 1fr 1fr 0.5fr;
+  grid-template-columns: 0.7fr 1fr 0.8fr;
   grid-template-rows: 1.5fr 1fr;
   justify-content: center;
   margin-left: 10%;
@@ -111,14 +111,14 @@ button {
 }
 
 /* slideshow style */
-.slideshow_container_bac {
+.slideshow_container_bac, .slideshow_container_trung, .slideshow_container_nam {
   max-width: 1400px;
   position: relative;
   margin: auto;
 }
 
 /* Hide the images by default */
-.mySlide_bac {
+.mySlide_bac, .mySlide_trung, .mySlide_nam {
   display: none;
 }
 
@@ -144,25 +144,7 @@ button {
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-/* .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-} */
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
 
-.active, .dot:hover {
-  background-color: #717171;
-}
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -209,4 +191,31 @@ button {
 .trung_map, .trung_tram_map, .trung_dots {
   grid-row: 1/2;
   grid-column: 2/3;
+}
+#mien_trung_tram {
+  display: none;
+}
+
+/* mien nam style */
+.mien_nam, .mien_nam_tram, .mien_nam_ss {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.nam_text, .nam_tram_text, .nam_ss_text {
+  grid-column: 1/2;
+  align-self: center;
+}
+
+.nam_text p, .nam_tram_text p, .nam_ss_text p{
+  font-family: Merriweather;
+}
+.nam_map, .nam_tram_map, .nam_dots {
+  grid-column: 2/3;
+}
+
+#mien_nam_tram {
+  display: none;
 }

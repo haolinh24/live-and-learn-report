@@ -19,6 +19,22 @@
     document.getElementById("mien_bac_tram").style.display="none";
     document.getElementById("mien_bac").style.display="grid";
   }
+  function appear_trung_tram() {
+    document.getElementById("mien_trung_tram").style.display="grid";
+    document.getElementById("mien_trung").style.display="none";
+  }
+  function appear_mien_trung() {
+    document.getElementById("mien_trung").style.display="grid";
+    document.getElementById("mien_trung_tram").style.display="none";
+  }
+  function appear_mien_nam() {
+    document.getElementById("mien_nam").style.display="grid";
+    document.getElementById("mien_nam_tram").style.display="none";
+  }
+  function appear_nam_tram() {
+    document.getElementById("mien_nam_tram").style.display="grid";
+    document.getElementById("mien_nam").style.display="none";
+  }
 </script>
 <body>
   <div class="cover">
@@ -96,25 +112,93 @@
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 <h2 class="sub_head"><mark>MIỀN TRUNG</mark></h2>
+<div class="slideshow_container_trung">
+<div class="mySlide_trung fade">
 <div id="mien_trung" class="mien_trung">
 <div class="trung_text"><p>Nồng độ bụi PM2,5 tại các tỉnh thành miền Trung trong năm 2020 nhìn chung là tương đối thấp, biến thiên từ 11,47 đến 25,49 µg/m3. Với điều kiện tự nhiên ở khu vực này là địa hình dài và hẹp, phía Tây chủ yếu là đồi núi có ít cư dân sinh sống, phía Đông là đồng bằng ven biển tập trung dân cư và giao thông phát triển, do đó ô nhiễm bụi tập trung chủ yếu ở vùng ven biển. Khu vực Bắc Trung Bộ có nồng độ PM2,5 tại các tỉnh thành dao động từ 14,32 đến 25,5 µg/m3. Nồng độ bụi PM2,5 ở các tỉnh tiếp giáp khu vực phía Bắc như Thanh Hóa (25,5 µg/m3), Nghệ An (24,11 µg/m3), Hà Tĩnh (21,7 µg/m3) có xu hướng cao hơn. Khu vực Nam Trung Bộ có nồng độ PM2,5 trong dải từ 13,02 đến 17,44 µg/m3, thấp hơn so với khu vực Bắc Trung Bộ. Điều này có thể lý giải do khu vực này ít tập trung các nhà máy công nghiệp (Hình 39). Tây Nguyên có địa hình cao nguyên, tỉ lệ đất rừng cao nên nồng độ bụi PM2,5 cũng đạt mức thấp, dao động từ 11,4 đến 14,34 µg/m3.
-</p></div>
+</p><button type="button" class="bac_tram_btn" onclick="appear_trung_tram()">Xem thêm dữ liệu trạm mặt đất >></button></div>
 <div class="trung_map">
-  <p class="caption">Bản đồ thể hiện nồng độ PM 2.5 trên trọng số dân cư các tỉnh phía Bắc</p>
+  <p class="caption">Bản đồ thể hiện nồng độ PM 2.5 trên trọng số dân cư các tỉnh miền Trung</p>
   <p class="instruction_cap">Rê chuột vào các tỉnh để biết thêm chi tiết</p>
   <div class="flourish-embed flourish-map" data-src="visualisation/6395252"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
 </div>
 <div id="mien_trung_tram" class="mien_trung_tram">
-  <div class="trung_tram_text"><p>Nồng độ bụi PM2,5 trung bình năm 2020 tại các trạm ở miền Trung được biểu diễn trong Hình 13 với 5/12 trạm đo vượt chuẩn. Cao nhất tại trạm Phú Xuân University (Hà Tĩnh), trạm này nằm trong trường học để khảo sát lượng phát thải vào giờ tan học và thấp nhất tại trạm FPT Complex, Đà Nẵng (12,19 µg/m3). Các trạm vượt chuẩn thuộc khu vực Bắc Trung Bộ, là khu vực tập trung nhiều nhà máy nhất ở miền Trung, các trạm chưa vượt chuẩn tập trung chủ yếu ở khu vực Tây Nguyên và Nam Trung Bộ, kết quả này tương đồng với dữ liệu bản đồ</p></div>
+  <div class="trung_tram_text"><p>Nồng độ bụi PM2,5 trung bình năm 2020 tại các trạm ở miền Trung được biểu diễn trong Hình 13 với 5/12 trạm đo vượt chuẩn. Cao nhất tại trạm Phú Xuân University (Hà Tĩnh), trạm này nằm trong trường học để khảo sát lượng phát thải vào giờ tan học và thấp nhất tại trạm FPT Complex, Đà Nẵng (12,19 µg/m3). Các trạm vượt chuẩn thuộc khu vực Bắc Trung Bộ, là khu vực tập trung nhiều nhà máy nhất ở miền Trung, các trạm chưa vượt chuẩn tập trung chủ yếu ở khu vực Tây Nguyên và Nam Trung Bộ, kết quả này tương đồng với dữ liệu bản đồ</p><button type="button" class="bac_tram_btn" onclick="appear_mien_trung()"> << Quay lại dữ liệu vệ tinh</button></div>
   <div class="trung_tram_map">
     <p class="caption">Bản đồ thể hiện phân bố và nồng độ PM 2.5 trung bình năm của các trạm đo ở miền Trung</p>
     <p class="instruction_cap">Click vào các ô vuông màu để ẩn/hiện các trạm đo. Rê chuột vào các chấm tròn trên bản đồ để biến thêm thông tin các trạm</p>
     <div class="flourish-embed flourish-map" data-src="visualisation/6440277"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
 </div>
+</div>
+<div class="mySlide_trung fade">
 <div class="mien_trung_ss">
   <div class="trung_ss_text">Nồng độ PM2,5 theo tỉnh/ thành phố tại miền Trung năm 2019 và 2020 được biểu diễn ở Hình 12. Hầu hết các tỉnh thành đều có nồng độ bụi PM2,5 trung bình năm thấp hơn ngưỡng QCVN 05:2013 trong đó các tỉnh vượt ngưỡng là Thanh Hóa (2019, 2020) và Nghệ An (2019). Khi so sánh giữa 2 năm 2019 và 2020, có thể thấy nồng độ bụi trong năm 2020 cũng có xu hướng giảm 13,59% so với 2019 tại các tỉnh/thành phố ở miền Trung.
 </div>
   <div class="trung_dots"><div class="flourish-embed flourish-scatter" data-src="visualisation/6423260"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+</div>
+</div>
+<a class="prev" onclick="plusSlides_trung(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides_trung(1)">&#10095;</a>
+</div>
+<h2 class="sub_head"><mark>Miền Nam</mark></h2>
+<div class="slideshow_container_nam">
+<div class="mySlide_nam fade">
+<div id="mien_nam" class="mien_nam">
+  <div class="nam_text"><p>Tại miền Nam, nồng độ bụi PM2.5 trung bình năm 2020 tại các tỉnh thành dao động từ 11.86 đến 26.86 𝜇g/m3. Có thể nhận thấy sự chênh lệch lớn giữa khu vực ở thành phố Hồ Chí Minh và các tỉnh lân cận (vùng Đông Nam Bộ) và vùng phía Nam thuộc ĐB sông Cửu Long. Vùng Đông Nam Bộ có nồng độ bụi PM2.5 dao động từ 12.77 đến 26.86 𝜇g/m3, cao nhất ở Hồ Chí Minh (25.06 µg/m3), Bình Dương (26.86 µg/m3), thấp nhất ở Bình Thuận (16.07 µg/m3), Ninh Thuận (12.77 µg/m3). Các tỉnh thành ở khu vực ĐB sông Cửu Long có nồng độ bụi PM2.5 thấp hơn do khu vực này có địa hình sông ngòi kênh rạch dày đặc, trồng nhiều lúa nước, dao động từ 11.86 đến 19.15 µg/m3. Cụ thể, nồng độ bụi thấp nhất ở Cà Mau (11.86 µg/m3), Bạc Liêu (12.86 µg/m3), cao nhất ở Long An (19.15 µg/m3), Tiền Giang (16.82 µg/m3) vì đây là các tỉnh tiếp giáp với TP. Hồ Chí Minh.</p>
+  <button type="button" class="nam_tram_btn" onclick="appear_nam_tram()"> Xem thêm dữ liệu trạm mặt đất >> </button>
+  </div>
+  <div class="nam_map">
+    <p class="caption">Bản đồ thể hiện nồng độ PM2.5 theo trọng số dân cư ở các tỉnh phía Nam</p>
+    <p class="instruction_cap">Rê chuột vào mỗi tỉnh để biết thêm chi tiết</p>
+    <div class="flourish-embed" data-src="story/887830"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+</div>
+<div id="mien_nam_tram" class="mien_nam_tram">
+<div class="nam_tram_text"><p>Nồng độ bụi trung bình năm 2020 ở miền Nam từ các trạm quan trắc (bao gồm 6 trạm PAMAir, 13 trạm AirVisual, 2 trạm ĐHQG TP. Hồ Chí Minh và 1 trạm Lãnh Sự Quán Mỹ) được biểu diễn như Hình 14. Có 7/22 trạm đo có nồng độ bụi PM2.5 trung bình năm vượt chuẩn (màu vàng). Nồng độ bụi PM2.5 cao nhất tại trạm Ap Xuan Thoi Dong 2 (Hồ Chí Minh), thấp nhất tại trạm FPT Software (Hồ Chí Minh). Nhìn chung, các trạm vượt chuẩn tập trung ở khu vực Đông Nam Bộ, phản ảnh phân bố tương ứng với kết quả chạy mô hình (Hình 12).
+</p>
+<button type="button" class="nam_tram_btn" onclick="appear_mien_nam()"> << Quay về dữ liệu vệ tinh </button>
+</div>
+<div class="nam_tram_map">
+  <p class="caption">Biểu đồ thể hiện nồng độ PM2.5 theo trong số dân cư và phân bố các trạm đo mặt đất tại các tỉnh phía Nam</p>
+  <p class="instruction_cap">Rê chuột vào các tỉnh/trạm đo để biết thêm thông tin chi tiết và click vào các ô màu để ẩn/hiện các trạm đo</p>
+  <div class="flourish-embed" data-src="story/898472"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+</div>
+</div>
+<div class="mySlide_nam fade">
+<div class="mien_nam_ss">
+  <div class="nam_ss_text"><p>Hình bên biểu diễn nồng độ bụi PM2.5 tại các tỉnh/ thành phố tại miền Nam được phân chia theo địa giới hành chính cho năm 2019 và 2020. Nhìn chung, hầu hết các tỉnh thành đều có nồng độ bụi PM2.5 thấp hơn ngưỡng QCVN. Các tỉnh thành phố có giá trị vượt chuẩn bao gồm Bình Dương (2019, 2020), Hồ Chí Minh (2019, 2020), Đồng Nai (2019). Ngoài ra, có thể thấy nồng độ bụi PM2.5 trong năm 2020 có xu hướng giảm trung bình 10.4% so với năm 2019 tại các tỉnh/thành phố.</p>
+  </div>
+  <div class="nam_dots"><div class="flourish-embed flourish-scatter" data-src="visualisation/6420370"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+</div>
+</div>
+<a class="prev" onclick="plusSlides_nam(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides_nam(1)">&#10095;</a>
+</div>
+</div>
+<div class="header_dothi_db">
+  <div class="title">
+    <h1>III.Chất lượng không khí tại các đô thị đặc biệt</h1>
+  </div>
+  <h2 class="sub_head"><mark>HÀ NỘI</mark></h2>
+  <div class="hanoi">
+    <div class="sub_title"><p>Ô nhiễm bụi PM2.5 ở Hà Nội chủ yếu tập trung tại các quận nội thành</p></div>
+  <div class="hanoi_scence">
+    <p>Bản đồ nồng độ bụi PM2.5 ở Hà Nội trung bình theo trọng số dân số của các quận huyện trong năm 2020 được biểu diễn như hình bên. Theo đó, chỉ số này có sự chênh lệch rõ rệt giữa các quận nội thành và thị trấn/huyện ngoại thành. Tại các quận nội thành, nồng độ bụi dao động trong khoảng 31.77 - 32.89 µg/m3, cao nhất tại Hai Bà Trưng (32.895 µg/m3), Hoàn Kiếm (32.894 µg/m3) và thấp nhất tại Hà Đông (31.77 µg/m3) và Nam Từ Liêm (32.13 µg/m3). Trong khi đó, giá trị này tại các huyện ngoại thành biến thiên trong khoảng 24.55 - 33.46 µg/m3, cao nhất là Gia Lâm (33.46 µg/m3), Thanh Trì (32.53 µg/m3) và thấp nhất tại Mỹ Đức (25.56 µg/m3), Ba Vì (24.55 µg/m3). Như vậy, kết quả này thể hiện rõ sự ảnh hưởng của mật độ dân cư đến sự phân bố không gian của bụi PM2.5.</p>
+    <div class="hanoi_map"><div class="flourish-embed flourish-map" data-src="visualisation/6429402"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+  </div>
+  <div class="sub_title"><p>Nồng độ bụi PM2.5 của Hà Nội tăng trong các tháng mùa khô</p></div>
+  <div class="hanoi_mua">
+    <p>Hà Nội nằm ở miền Bắc Việt Nam với thời gian mùa mưa kéo dài từ tháng 5 đến tháng 9, mùa khô kéo dài từ tháng 11 đến tháng 3, tháng 4 và tháng 10 là các tháng chuyển mùa (Bộ TNMT, 2009). Trong các tháng mùa khô, miền Bắc Việt Nam chịu ảnh hưởng bởi gió mùa đông bắc, mang ô nhiễm bụi từ phía Bắc Trung Quốc lan truyền xuống (Hien et al., 2004). Bên cạnh đó, điều kiện áp suất cao và không khí khô dẫn đến bụi PM2.5 tích lũy và kém phân tán (Hien et al., 2002; Vinh et al., 2018). Theo hình bên có thể thấy nồng độ bụi PM2.5 ở Hà Nội tăng cao trong khoảng thời gian từ tháng 11 đến tháng 3. Trong đó cao nhất là tháng 2, nồng độ bụi PM2.5 của các quận huyện ở Hà Nội trong tháng này biến động từ 38.7 đến 55.9 µg/m3. Vào các tháng mùa mưa, do thường xuyên xảy ra mưa nên nồng độ bụi PM2.5 giảm thấp. Trong đó thấp nhất là vào tháng 8, nồng độ bụi PM2.5 tại các quận/huyện biến động từ 13.2 đến 18.6 µg/m3. Sự chênh lệch nồng độ bụi PM2.5 giữa tháng cao nhất và tháng thấp nhất ở Hà Nội trong năm 2020 là đáng kể, nguyên nhân chủ yếu bởi sự ảnh hưởng điều kiện khí hậu, gió mùa.
+    </p>
+    <div class="hanoi_mua_map"><div class="flourish-embed flourish-map" data-src="visualisation/6498593"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+  </div>
+  <div class="hanoi_dsq">
+    <div class="dsq_diachi">
+      <p class="dsq_diachi_text">Trong khoảng thời gian từ năm 2015 đến 2018, trạm quan trắc ĐSQ Mỹ được đặt tại số 7 Láng Hạ, Ba Đình, Hà Nội. Do việc di dời và lắp đặt lại trạm diễn ra trong thời gian năm 2019 nên trạm không có dữ liệu của phần lớn năm này. Năm 2019 đến nay, trạm được đặt tại 19/21 Hai Bà Trưng, quận Hoàn Kiếm, Hà Nội và nằm gần các đường giao thông như Hai Bà Trưng, phố Hàng Bài, Lý Thường Kiệt và phố Ngô Quyền</p>
+      <div class="dsq_diachi_map"><div class="flourish-embed flourish-map" data-src="visualisation/6498826"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+      
+      
+    </div>
+  </div>
 </div>
 </div>
 </body>
@@ -134,7 +218,51 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlide_bac");
-  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+// slidetrung
+
+showSlides_trung(slideIndex);
+// Next/previous controls
+function plusSlides_trung(n) {
+  showSlides_trung(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide_trung(n) {
+  showSlides_trung(slideIndex = n);
+}
+
+function showSlides_trung(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlide_trung");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+// SLIDESHOW NAM
+showSlides_nam(slideIndex);
+// Next/previous controls
+function plusSlides_nam(n) {
+  showSlides_nam(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide_nam(n) {
+  showSlides_nam(slideIndex = n);
+}
+
+function showSlides_nam(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlide_nam");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -144,3 +272,5 @@ function showSlides(n) {
 }
 </script>
 </html>
+
+
