@@ -111,14 +111,14 @@ button {
 }
 
 /* slideshow style */
-.slideshow_container_bac, .slideshow_container_trung, .slideshow_container_nam {
+.slideshow_container_bac, .slideshow_container_trung, .slideshow_container_nam, .hanoi_dsq {
   max-width: 1400px;
   position: relative;
   margin: auto;
 }
 
 /* Hide the images by default */
-.mySlide_bac, .mySlide_trung, .mySlide_nam {
+.mySlide_bac, .mySlide_trung, .mySlide_nam, .mySlide_dsq_HN {
   display: none;
 }
 
@@ -218,4 +218,47 @@ button {
 
 #mien_nam_tram {
   display: none;
+}
+/* Hanoi style */
+.hanoi_scene, .hanoi_mua, .hanoi_tram {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+.hanoi_map, .hanoi_mua_line, .hanoi_tram_map {
+  grid-column: 2/3;
+}
+.hanoi_map, .hanoi_tram_map {
+  width: 70%;
+}
+.hanoi_scene_text, .hanoi_mua_text, .hanoi_tram_text {
+  grid-column: 1/2;
+  font-family: Merriweather;
+  align-self: center; 
+} 
+
+.hanoi_mua_sub, .hanoi_tq_sub {
+  margin-top: 5vw;
+}
+
+.hanoi_tram {
+  margin-top: 5vw;
+}
+
+.dsq_diachi, .dsq_nam, .dsq_thang, .dsq_ngay_AQI, .dsq_ngay_tuan, .dsq_gio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.dsq_diachi_text, .dsq_nam_text, .dsq_thang_text, .dsq_ngay_AQI_text, .dsq_ngay_tuan_text, .dsq_gio_text {
+  grid-column: 1/2;
+  align-self: center;
+  font-family: Merriweather;
+}
+
+.dsq_diachi_map, .dsq_nam_line, .dsq_thang_line, .dsq_ngay_AQI_line, .dsq_ngay_tuan_line, .dsq_gio_line {
+  grid-column: 2/3;
 }
