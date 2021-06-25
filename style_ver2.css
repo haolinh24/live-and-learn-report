@@ -111,14 +111,14 @@ button {
 }
 
 /* slideshow style */
-.slideshow_container_bac, .slideshow_container_trung, .slideshow_container_nam, .hanoi_dsq {
+.slideshow_container_bac, .slideshow_container_trung, .slideshow_container_nam, .hanoi_dsq, .hochiminh_lsq {
   max-width: 1400px;
   position: relative;
   margin: auto;
 }
 
 /* Hide the images by default */
-.mySlide_bac, .mySlide_trung, .mySlide_nam, .mySlide_dsq_HN {
+.mySlide_bac, .mySlide_trung, .mySlide_nam, .mySlide_dsq_HN, .mySlide_lsq_HCM {
   display: none;
 }
 
@@ -220,6 +220,24 @@ button {
   display: none;
 }
 /* Hanoi style */
+.hanoi_head {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  margin-top: 20px;
+}
+.hanoi_sub_head, .anh_hanoi {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+}
+.anh_hanoi {
+  width: 20%;
+  opacity: 0.5;
+}
+.hanoi_sub_head {
+  z-index: 1;
+}
 .hanoi_scene, .hanoi_mua, .hanoi_tram {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -261,4 +279,74 @@ button {
 
 .dsq_diachi_map, .dsq_nam_line, .dsq_thang_line, .dsq_ngay_AQI_line, .dsq_ngay_tuan_line, .dsq_gio_line {
   grid-column: 2/3;
+}
+
+.dsq_diachi_map {
+  width: 70%;
+  justify-self: center;
+}
+
+/* Thanh pho Ho chi minh style */
+.hochiminh_head {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  margin-top: 20px;
+}
+.hochiminh_sub_head, .anh_hochiminh {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+}
+.anh_hochiminh {
+  width: 20%;
+  opacity: 0.7;
+}
+.hochiminh_sub_head {
+  z-index: 1;
+}
+
+.hochiminh_scene, .hochiminh_tram, .hochiminh_mua {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+.hochiminh_scene_text, .hochiminh_tram_text, .hochiminh_mua_text{
+  grid-column: 1/2;
+  font-family: Merriweather;
+  align-self: center;
+}
+.hochiminh_map, .hochiminh_tram_map, .hochiminh_mua_line{
+  grid-column: 2/3;
+  align-self: center;
+}
+
+.hochiminh_map, .hochiminh_tram_map {
+  width: 50%;
+  justify-self: center;
+}
+.hochiminh_tram {
+  margin-top: 50px;
+}
+
+.lsq_diachi, .lsq_nam, .lsq_thang, .lsq_ngay_AQI, .lsq_ngay_tuan, .lsq_gio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.lsq_diachi_text, .lsq_nam_text, .lsq_thang_text, .lsq_ngay_AQI_text, .lsq_ngay_tuan_text, .lsq_gio_text {
+  grid-column: 1/2;
+  font-family: Merriweather;
+  align-self: center;
+}
+
+.lsq_diachi_map, .lsq_nam_line, .lsq_thang_line, .lsq_ngay_AQI_line, .lsq_ngay_tuan_line, .lsq_gio_line{
+  grid-column: 2/3;
+}
+.lsq_diachi_map {
+  width: 70%;
+  justify-self: center;
 }
