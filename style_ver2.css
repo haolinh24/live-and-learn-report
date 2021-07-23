@@ -1,3 +1,7 @@
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
 .cover {
   width: 100vw;
   max-height: 100vh;
@@ -253,8 +257,8 @@ button {
 .hanoi_scene_text, .hanoi_mua_text, .hanoi_tram_text {
   grid-column: 1/2;
   font-family: Merriweather;
-  align-self: center; 
-} 
+  align-self: center;
+}
 
 .hanoi_mua_sub, .hanoi_tq_sub {
   margin-top: 5vw;
