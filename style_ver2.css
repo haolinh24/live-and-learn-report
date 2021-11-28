@@ -43,51 +43,63 @@ h1, h2, p {
   font-size: 0.8em;
 }
 .tq_time_space {
-  margin-top: 10vh;
+  margin-top: 5vh;
   display: grid;
-  grid-template-columns: 0.7fr 1fr 0.5fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 0.7fr 1fr;
+  grid-template-rows: 0.3fr 1fr;
   margin-left: 10%;
   margin-right: 10%;
 }
-.tq_2019 {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-}
+/* .tq_2019 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+} */
 .tq_text {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
   align-self: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 2%;
   font-family: 'Merriweather', serif;
 }
 .tq_2020 {
   grid-column: 2 / 3;
   grid-row: 1 / 3;
 }
+.tq_2020 {align-content: center;}
 .tq_dothi {
   display: grid;
-  grid-template-columns: 0.7fr 1fr 0.8fr;
-  grid-template-rows: 1.5fr 1fr;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: 0.3fr 1fr;
   justify-content: center;
   margin-left: 10%;
   margin-right: 10%;
 }
-.map_dothi {
-  grid-column: 2/3;
-  grid-row: 1/3;
-}
-.graph_dothi {
-  grid-column: 3/4;
-  grid-row: 1/3;
-}
-
-.tq_dothi_text {
+.slideshow_container_dothi {
   grid-column: 1/2;
   grid-row: 1/3;
+  justify-self: stretch;
+}
+/* .map_dothi {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.graph_dothi {
+  grid-column: 2/3;
+  grid-row: 2/3;
+} */
+
+.tq_dothi_text {
+  grid-column: 2/3;
+  grid-row: 1/3;
   align-self: center;
+  justify-self: end;
+  /* width: 70%; */
   font-family: Merriweather;
   margin-right: 2vw;
 }
+
 .mien_bac, .mien_bac_tram, .mien_bac_ss {
   display: grid;
   grid-template-columns: 0.7fr 1fr;
@@ -115,17 +127,16 @@ button {
 }
 
 /* slideshow style */
-.slideshow_container_bac, .slideshow_container_trung, .slideshow_container_nam, .hanoi_dsq, .hochiminh_lsq {
+.slideshow_container_bac, .slideshow_container_trung, .slideshow_container_nam, .hanoi_dsq, .hochiminh_lsq  {
   max-width: 1400px;
   position: relative;
   margin: auto;
 }
 
 /* Hide the images by default */
-.mySlide_bac, .mySlide_trung, .mySlide_nam, .mySlide_dsq_HN, .mySlide_lsq_HCM {
+.mySlide_bac, .mySlide_trung, .mySlide_nam, .mySlide_dsq_HN, .mySlide_lsq_HCM, .mySlide_dothi {
   display: none;
 }
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -148,7 +159,20 @@ button {
   border-radius: 3px 0 0 3px;
 }
 
+.dot {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
+.active, .dot:hover {
+  background-color: #717171;
+}
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -170,7 +194,7 @@ button {
 .sub_head {
   text-align: center;
   font-size: 2.5em;
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 .instruction_cap {
   font-style: italic;
@@ -228,20 +252,20 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  margin-top: 20px;
+  /* margin-top: 10px; */
 }
 .hanoi_sub_head, .anh_hanoi {
   grid-column: 1/2;
   grid-row: 1/2;
   justify-self: center;
 }
-.anh_hanoi {
+/* .anh_hanoi {
   width: 20%;
   opacity: 0.5;
 }
 .hanoi_sub_head {
   z-index: 1;
-}
+} */
 .hanoi_scene, .hanoi_mua, .hanoi_tram {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -260,12 +284,16 @@ button {
   align-self: center;
 }
 
-.hanoi_mua_sub, .hanoi_tq_sub {
+.hanoi_mua_sub {
   margin-top: 5vw;
 }
 
 .hanoi_tram {
   margin-top: 5vw;
+}
+
+.hanoi_dsq{
+  width: 80%;
 }
 
 .dsq_diachi, .dsq_nam, .dsq_thang, .dsq_ngay_AQI, .dsq_ngay_tuan, .dsq_gio {
@@ -302,13 +330,13 @@ button {
   grid-row: 1/2;
   justify-self: center;
 }
-.anh_hochiminh {
+/* .anh_hochiminh {
   width: 20%;
   opacity: 0.7;
 }
 .hochiminh_sub_head {
   z-index: 1;
-}
+} */
 
 .hochiminh_scene, .hochiminh_tram, .hochiminh_mua {
   display: grid;
@@ -334,6 +362,9 @@ button {
   margin-top: 50px;
 }
 
+.hochiminh_lsq{
+  width: 80%;
+}
 .lsq_diachi, .lsq_nam, .lsq_thang, .lsq_ngay_AQI, .lsq_ngay_tuan, .lsq_gio {
   display: grid;
   grid-template-columns: 1fr 1fr;
