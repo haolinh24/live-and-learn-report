@@ -389,7 +389,7 @@ button {
 
 .dsq_diachi, .dsq_nam, .dsq_thang, .dsq_ngay_AQI, .dsq_ngay_tuan, .dsq_gio {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.6fr 1fr;
   margin-left: 5vw;
   margin-right: 5vw;
 }
@@ -508,7 +508,7 @@ button {
 }
 .lsq_diachi, .lsq_nam, .lsq_thang, .lsq_ngay_AQI, .lsq_ngay_tuan, .lsq_gio {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr;
   margin-left: 5vw;
   margin-right: 5vw;
 }
