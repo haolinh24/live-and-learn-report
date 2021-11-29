@@ -11,30 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
 </head>
 <script>
-  function appear_bac_tram() {
-    document.getElementById("mien_bac_tram").style.display="grid";
-    document.getElementById("mien_bac").style.display="none";
-  }
-  function appear_mien_bac() {
-    document.getElementById("mien_bac_tram").style.display="none";
-    document.getElementById("mien_bac").style.display="grid";
-  }
-  function appear_trung_tram() {
-    document.getElementById("mien_trung_tram").style.display="grid";
-    document.getElementById("mien_trung").style.display="none";
-  }
-  function appear_mien_trung() {
-    document.getElementById("mien_trung").style.display="grid";
-    document.getElementById("mien_trung_tram").style.display="none";
-  }
-  function appear_mien_nam() {
-    document.getElementById("mien_nam").style.display="grid";
-    document.getElementById("mien_nam_tram").style.display="none";
-  }
-  function appear_nam_tram() {
-    document.getElementById("mien_nam_tram").style.display="grid";
-    document.getElementById("mien_nam").style.display="none";
-  }
+
+
 </script>
 <body>
   <div class="cover">
@@ -46,7 +24,14 @@
     <h2> năm 2019 - 2020 </h2>
     </div>
   </div>
-<div class="header_toanquoc">
+  <div id="navbar" onclick="myFunction(event)">
+    <a class="active" href="#toan_quoc">Toàn quốc</a>
+    <a href="#ba_mien">Ba miền</a>
+    <a href="#hanoi">Hà Nội</a>
+    <a href="#hochiminh">TP Hồ Chí Minh</a>
+  </div>
+  <div class="content">
+<div class="header_toanquoc" id="toan_quoc">
   <div class="title">
   <h1>Hiện trạng chất lượng không khí trên toàn quốc</h1>
   </div>
@@ -87,8 +72,27 @@
   <a class="next" onclick="plusSlides_dothi(1)">&#10095;</a> -->
   </div>
     </div>
+    <div class="tq_thai">
+      <div class="sub_title tqthai">Đóng góp nguồn thải bụi PM2.5 toàn quốc từ đâu?</div>
+      <div class="tqthai_slideshow_container">
+        <div class="mySlide_tqthai fade">
+      <div class="tqthai_graph">
+      <div class=tqthai_graph_text><p>Theo nghiên cứu của GS. TS. Nguyễn Thị Kim Oanh và cộng sự, ước tính lượng phát thải PM2.5 năm 2018 từ các hoạt động của con người và cháy rừng trên lãnh thổ Việt Nam là khoảng 600 nghìn tấn (chưa kể nguồn bụi đường và một số nguồn khác). Lượng phát thải PM2.5 từ đốt bỏ phụ phẩm nghiệp chiếm tỉ lệ cao nhất (40%), tiếp theo là đun nấu dân sinh (17%), giao thông đường bộ (13%), cháy rừng (12,7%), hoạt động công nghiệp (11%), và nhà máy nhiệt điện (3,3%). Các lĩnh vực còn lại đóng góp chung khoảng 3% tổng lượng phát thải PM2.5 của cả nước</p></div>
+      <div class="tqthai_graph_viz"><div class="flourish-embed" data-src="visualisation/7968003"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
   </div>
 </div>
+<div class="mySlide_tqthai fade">
+  <div class="tqthai_map">
+    <div class="tqthai_map_text"><p>Bản đồ phát thải PM2.5 cấp tỉnh năm 2018 cho thấy các tỉnh, thành phố có lượng phát thải cao chủ yếu nằm ở vùng Đồng bằng sông Hồng với mức độ phát thải trên 6,5 tấn/km2/năm, và ở vùng Đông Nam Bộ và Đồng bằng sông Cửu Long với mức độ trên 5,0 tấn/km2/năm. Đặc biệt, Hà Nội và TP. Hồ Chí Minh có lượng phát thải lớn nhất, đều trong khoảng 9,01-10,25 tấn/km2/năm. Các tỉnh thành ở các khu vực còn lại như vùng Trung du và miền núi phía Bắc và miền Trung có mức độ phát thải PM2.5 thấp hơn, dao động từ 0,35 đến 3,0 tấn/km2/năm</p></div>
+    <div class="tqthai_map_viz"><div class="flourish-embed" data-src="story/1052362"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+  </div>
+</div>
+<a class="prev" onclick="plusSlides_tqthai(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides_tqthai(1)">&#10095;</a>
+</div>
+  </div>
+</div>
+<div id="ba_mien">
 <div class="header_mien">
   <div class="title">
   <h1>Hiện trạng chất lượng không khí theo miền</h1>
@@ -102,7 +106,7 @@
   <button type="button" class="bac_tram_btn" onclick="appear_bac_tram()">Xem thêm dữ liệu trạm mặt đất >></button>
   </div>
   <div class=bac_map>
-    <p class="caption">Bản đồ thể hiện nồng độ PM <sub>2.5</sub> trên trọng số dân cư các tỉnh phía Bắc</p>
+    <p class="caption">Bản đồ thể hiện nồng độ PM <sub>2.5</sub> trung bình ở các tỉnh phía Bắc</p>
     <p class="instruction_cap">Rê chuột vào các tỉnh để biết thêm chi tiết</p>
     <div class="flourish-embed flourish-map" data-src="visualisation/6394851"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
   </div>
@@ -197,10 +201,12 @@
 <a class="next" onclick="plusSlides_nam(1)">&#10095;</a>
 </div>
 </div>
+</div>
 <div class="header_dothi_db">
   <div class="title">
     <h1>III.Chất lượng không khí tại các đô thị đặc biệt</h1>
   </div>
+  <div id="hanoi">
   <div class="hanoi_head">
   <h2 class="sub_head hanoi_sub_head">HÀ NỘI</h2>
   <!-- <img class="anh_hanoi" src="diaphantinh.svg" alt="bản đồ việt nam hà nội tô đỏ"> -->
@@ -210,19 +216,19 @@
   <div class="hanoi">
   <div class="hanoi_scene">
     <p class="hanoi_scene_text">Theo dữ liệu mô hình MEM, về nồng độ bụi PM2.5 trung bình năm 2020 cấp quận/huyện/thị xã, có sự chênh lệch rõ rệt giữa các quận nội thành (nơi có mật độ dân số cao) và huyện, thị xã ngoại thành (nơi có mật độ dân số thấp hơn). Tại 12 quận nội thành, nồng độ bụi dao động trong khoảng từ 31,5 µg/m<sup>3</sup> đến 32,9 µg/m<sup>3</sup>, cao nhất tại quận Hai Bà Trưng (32,9 µg/m3) và thấp nhất tại Hà Đông (31,5 µg/m<sup>3</sup>). Trong khi đó, giá trị này tại các huyện/thị xã ngoại thành trong khoảng từ 24,1 µg/m<sup>3</sup> đến 33,6 µg/m<sup>3</sup>, cao nhất là Gia Lâm (33,6 µg/m<sup>3</sup>) và thấp nhất tại Ba Vì (24,1 µg/m<sup>3</sup>)</p>
-    <div class="hanoi_map"><p class="caption">Bản đồ nồng độ bụi PM<sub>2.5</sub> theo trọng số dân cư trên các quận/huyện của Hà Nội</p><p class="instruction_cap">Rê chuột vào từng quận để xem chi tiết</p><div class="flourish-embed flourish-map" data-src="visualisation/6429402"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+    <div class="hanoi_map"><p class="caption">Bản đồ nồng độ bụi PM<sub>2.5</sub>trung bình của Hà Nội</p><p class="instruction_cap">Rê chuột vào từng quận để xem chi tiết</p><div class="flourish-embed flourish-map" data-src="visualisation/6429402"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
   </div>
   <div class="hanoi_tram">
     <p class="hanoi_tram_text">Theo dữ liệu nồng độ bụi PM<sub>2.5</sub> trung bình năm 2020 từ 14 trạm cảm biến thu thập được tại Hà Nội, có tới 13/14 trạm cảm biến có nồng độ bụi PM2.5 trung bình năm vượt quy chuẩn. Giá trị tại các trạm dao động từ 22,3 µg/m3 đến 59,8 µg/m<sup>3</sup>, trong đó thấp nhất là 22,3 µg/m<sup>3</sup>Theo dữ liệu nồng độ bụi PM2.5 trung bình năm 2020 từ 14 trạm cảm biến thu thập được tại Hà Nội, có tới 13/14 trạm cảm biến có nồng độ bụi PM2.5 trung bình năm vượt quy chuẩn. Giá trị tại các trạm dao động từ 22,3 µg/m3 đến 59,8 µg/m3, trong đó thấp nhất là 22,3 µg/m<sup>3</sup> tại trạm FSoft Cầu Giấy và cao nhất là 59,8 µg/m<sup>3</sup> tại trạm Trần Hưng Đạo đặt tại thị xã Sơn Tây  tại trạm FSoft Cầu Giấy và cao nhất là 59,8 µg/m<sup>3</sup> tại trạm Trần Hưng Đạo đặt tại thị xã Sơn Tây.
     </p>
-    <div class="hanoi_tram_map"><p class="caption">Bản đồ nồng độ bụi PM<sub>2.5</sub> theo trọng số dân cư và phân bố các trạm đo mặt đất ở Hà Nội</p><p class="instruction_cap">Rê chuột vào từng quận và chấm màu để xem chi tiết. Click vào các ô màu để ẩn/hiện các trạm</p><div class="flourish-embed flourish-map" data-src="visualisation/6498593"><script src="https://public.flourish.studio/resources/embed.js"></script></div></>
+    <div class="hanoi_tram_map"><p class="caption">Bản đồ nồng độ bụi PM<sub>2.5</sub> trung bình và phân bố các trạm đo mặt đất ở các quận, huyện của Hà Nội</p><p class="instruction_cap">Rê chuột vào từng quận và chấm màu để xem chi tiết. Click vào các ô màu để ẩn/hiện các trạm</p><div class="flourish-embed flourish-map" data-src="visualisation/6498593"><script src="https://public.flourish.studio/resources/embed.js"></script></div></>
   </div>
 </div>
   <div class="sub_title hanoi_mua_sub"><p>Nồng độ bụi PM<sub>2.5</sub> của Hà Nội tăng trong các tháng mùa khô</p></div>
   <div class="hanoi_mua">
     <p class="hanoi_mua_text">Nồng độ bụi PM<sub>2.5</sub> trong năm 2020 có sự biến động rõ rệt theo mùa, trong đó tăng cao trong khoảng thời gian từ tháng 11 đến tháng 3 và giảm từ tháng 5 đến tháng 9; và chênh lệch rất lớn giữa tháng có nồng độ cao nhất và thấp nhất. Cụ thể, nồng độ bụi PM<sub>2.5</sub> của các quận/ huyện ở Hà Nội cao nhất trong tháng 2 và dao động từ 38,1 µg/m<sup>3</sup> đến 56,1 µg/m<sup>3</sup> và thấp nhất là vào tháng 8, biến động từ 13 µg/m<sup>3</sup> đến 18,6 µg/m3. Vào các tháng mùa hè, điều kiện nhiệt độ cao, gió mạnh làm cho bụi dễ khuếch tán, và thời tiết mưa nhiều cũng giúp nồng độ bụi PM<sub>2.5</sub> giảm thấp. Lưu ý, bên cạnh ảnh hưởng của các nguồn thải tại địa phương, chất lượng không khí Hà Nội cũng chịu ảnh hưởng tới bởi bụi PM2.5 lan truyền từ xa  và điều kiện khí tượng.
     </p>
-    <div class="hanoi_mua_line"><p class="caption">PM<sub>2.5</sub> theo trọng số dân ở 30 quận/huyện của Hà Nội</p><p class="instruction_cap">Đánh tên quận/huyện vào ô tìm kiếm dưới đây để xem chi tiết</p><div class="flourish-embed flourish-chart" data-src="visualisation/6505665"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+    <div class="hanoi_mua_line"><p class="caption">PM<sub>2.5</sub>trung bình theo tháng ở 30 quận/huyện của Hà Nội</p><p class="instruction_cap">Đánh tên quận/huyện vào ô tìm kiếm dưới đây để xem chi tiết</p><div class="flourish-embed flourish-chart" data-src="visualisation/6505665"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
   </div>
   <div class="sub_title"><p>Quan sát kĩ chất lượng không khí của Hà Nội qua trạm của Đại sứ quán Mỹ</p></div>
   <div class="hanoi_dsq">
@@ -269,8 +275,21 @@
     <a class="prev" onclick="plusSlides_dsq_hn(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides_dsq_hn(1)">&#10095;</a>
   </div>
+  <div class="sub_title hanoithai">Nguồn gốc bụi PM<sub>2.5</sub> của Hà Nội chủ yếu đến từ hoạt động công nghiệp?</div>
+  <div class="hanoi_thai">
+
+    <div class="hanoi_thai_text"><p>Theo nghiên cứu của Oanh & Huy (2021), ước tính tổng lượng PM2.5 phát thải khoảng 20 nghìn tấn/năm (chưa kể bụi đường và môt số nguồn khác), trong đó khoảng 48,3% lượng PM2.5 đến từ các hoạt động công nghiệp và làng nghề, 21,3% từ giao thông, 20,2% do đốt phụ phẩm nông nghiệp (rơm rạ) và 6,6% do đun nấu dân dụng và thương mại.</p></div>
+    <div class="hanoi_thai_viz"><p class="caption">Đóng góp của các nguồn thải bụi PM<sub>2.5</sub> ở Hà Nội năm 2018</p><div class="flourish-embed" data-src="visualisation/7969139"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+  </div>
+  <div class="sub_title hanoi_sk_intro"><p>Ước tính có gần 3000 ca tử vong sớm ở Hà Nội do phơi nhiễm bụi PM<sub>2/5</sub></p></div>
+  <div class="hanoi_sk">
+    <div class="hanoi_sk_text"><p>Dựa trên số liệu của bản đồ bụi PM<sub>2.5</sub> trung bình năm tại các quận/huyện năm 2019, Hà Nội có <mark>2.855 ca tử vong sớm</mark> do phơi nhiễm với bụi PM<sub>2.5</sub>So sánh giữa các quận/huyện, Hoàn Kiếm và Ba Đình là hai quận có tỉ suất tử vong sớm liên quan đến ô nhiễm không khí cao nhất, lần lượt là <mark>59.8 và 55.3 trên 100.000 dân.</mark></p></div>
+    <div class="hanoi_sk_viz"><p class="caption">Số ca tử vong sớm và tỉ suất tử vong/100.000 dân do phơi nhiễm với bụi PM<sub>2.5</sub>dựa trên dữ liệu năm 2019</p><p class="instruction_cap">Lựa chọn menu để xem hai loại dữ liệu</p>
+  <div class="flourish-embed" data-src="story/1052497"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+  </div>
 </div>
-<div class="hochiminh">
+<div>
+<div class="hochiminh" id="hochiminh">
   <div class="hochiminh_head">
     <h2 class="sub_head hochiminh_sub_head">TP. Hồ Chí Minh</h2>
     <!-- <img class="anh_hochiminh" src="tphochiminh.svg" alt=""> -->
@@ -281,18 +300,18 @@
     <p class="hochiminh_scene_text">
       Theo dữ liệu mô hình MEM, về nồng độ bụi PM<sub>2.5</sub> trung bình năm 2020 cấp quận/huyện, không có sự chênh lệch lớn giữa các quận/huyện, từ 21,4 µg/m<sup>3</sup> đến 27,4 µg/m<sup>3</sup>. Nồng độ bụi cao hơn ở các khu vực phía bắc và thấp hơn ở các khu vực phía nam xa trung tâm thành phố. Các khu vực có nồng độ bụi PM2.5 trung bình năm cao bao gồm TP. Thủ Đức (27,4 µg/m<sup>3</sup>), Quận 12 (26,7 µg/m<sup>3</sup>), quận Bình Thạnh (26,4 µg/m<sup>3</sup>), Quận 9 (26,3 µg/m<sup>3</sup>). Các huyện Bình Chánh và Cần Giờ có nồng độ bụi PM<sub>2.5</sub> trung bình năm thấp, lần lượt là 22,8 µg/m<sup>3</sup> và 21,4 µg/m<sup>3</sup>
     </p>
-    <div class="hochiminh_map"><div class="flourish-embed flourish-map" data-src="visualisation/6519284"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+    <div class="hochiminh_map"><p class="caption">PM<sub>2.5</sub>trung bình trên 25 quận/huyện/thành phố của TP.Hồ Chí Minh</p><p class="instruction_cap">Rê chuột vào từng quận/huyện/thành phố để biết thêm chi tiết.</p><div class="flourish-embed flourish-map" data-src="visualisation/6519284"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
   </div>
   <div class="hochiminh_tram">
     <p class="hochiminh_tram_text">Theo dữ liệu nồng độ bụi trung bình năm 2020 từ 18 trạm cảm biến thu thập được tại TP. Hồ Chí Minh, có 14 /18 trạm có nồng độ PM2.5 dưới ngưỡng QCVN 05:2013/BTNMT. Các giá trị trung bình nồng độ bụi PM2.5 trong năm 2020 tại các trạm này dao động trong khoảng từ 15,7 μg/m<sup>3</sup> đến 39,1 μg/m<sup>3</sup> với giá trị thấp nhất tại điểm đo FPT Software HCM và THCS Thạnh Mỹ Lợi và cao nhất tại điểm Ấp Xuân Thới Đông 2.
     </p>
-    <div class="hochiminh_tram_map"><div class="flourish-embed flourish-map" data-src="visualisation/6527234"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+    <div class="hochiminh_tram_map"><p class="caption">PM<sub>2.5</sub>trung bình và phân bố các trạm đo mặt đất trên 25 quận/huyện/thành phố của TP.Hồ Chí Minh</p><p class="instruction_cap">Rê chuột vào từng quận/huyện/thành phố để biết thêm chi tiết. Click vào ô màu để ẩn/hiện các trạm</p><div class="flourish-embed flourish-map" data-src="visualisation/6527234"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
   </div>
   <div class="sub_title hochiminh_mua_subtitle"><p> Giống như Hà Nội, nồng độ bụi PM <sub>2.5</sub> của TP. Hồ Chí Minh cũng ở mức cao điểm trong các tháng mùa khô</p></div>
   <div class="hochiminh_mua">
     <p class="hochiminh_mua_text">Nồng độ bụi PM2.5 trong năm 2020 có sự khác biệt về nồng độ bụi PM2.5 trong hai mùa mưa và mùa khô. Nồng độ bụi PM2.5 tăng cao nhất trong các tháng từ 11 đến tháng 2 (mùa khô) và giảm thấp trong thời gian từ tháng 6 – tháng 10 (mùa mưa). Trong các tháng mùa khô năm 2020, tháng 2 có nồng độ bụi PM2.5 cao nhất và dao động trong tháng này từ 29 – 39 µg/m<sup>3</sup>. Trong các tháng mùa mưa, tháng 8 có nồng độ bụi PM<sub>2.5</sub> thấp nhất, dao động ô nhiễm trong tháng này chỉ từ 14,7 – 18,4 µg/m<sup>3</sup>.
     </p>
-    <div class="hochiminh_mua_line"><div class="flourish-embed flourish-chart" data-src="visualisation/6527789"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+    <div class="hochiminh_mua_line"><p class="caption">PM<sub>2.5</sub>trung bình theo tháng ở 25 quận/huyện/thành phố của TP.Hồ Chí Minh</p><p class="instruction_cap">Đánh tên quận/huyện/thành phố vào ô tìm kiếm dưới đây để xem chi tiết</p><div class="flourish-embed flourish-chart" data-src="visualisation/6527789"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
   </div>
   <div class="hochiminh_lsq">
     <div class="mySlide_lsq_HCM fade">
@@ -340,9 +359,51 @@
     <a class="next" onclick="plusSlides_lsq_hcm(1)">&#10095;</a>
   </div>
 </div>
+<div class="sub_title hcmthai"><p>Nguồn phát PM<sub>2.5</sub> của TP. Hồ Chí Minh chủ yếu đến từ hoạt động giao thông?</p></div>
+  <div class="hcm_thai">
+    <div class="hcm_thai_text"><p>Theo kết quả nghiên cứu của PGS. TS. Hồ Quốc Bằng và cộng sự , kết quả kiểm kê năm 2017 cho thấy tổng lượng phát thải bụi PM2.5 tại TP. Hồ Chí Minh là hơn 4 nghìn tấn/năm. Trong đó, nguồn đường (giao thông) đóng góp bụi PM2.5 cao nhất tương ứng với 1.813 tấn/năm chiếm khoảng 45% (trong đó giao thông đường bộ là nguồn phát thải giao thông chủ yếu của TP. Hồ Chí Minh chiếm 75,13% tổng lượng thải PM2.5 của nguồn đường). Nguồn điểm đóng góp vào phát thải bụi PM2.5 đứng thứ hai với 1.289 tấn/năm chiếm khoảng 32% (dệt may và thực phẩm là hai ngành đóng góp nhiều nhất vào lượng bụi PM2.5 của ngành công nghiệp tại TP. Hồ Chí Minh lần lượt là 536 tấn/năm, chiếm 41,5%; và 258,66 tấn/năm chiếm 20,06% tổng phát thải của nguồn điểm). Ngoài ra, nguồn diện đóng góp bụi PM2.5 là thấp nhất (927 tấn/năm) chiếm khoảng 23% (hộ gia đình và nhà hàng - quán ăn là hai nguồn chính, đóng góp tương ứng tới 555,01 tấn/năm chiếm 59,87% và 274,06 tấn/năm chiếm 29,56% tổng phát thải từ nguồn diện của TP. Hồ Chí Minh
+    </p>
+    </div>
+    <div class="hcm_thai_viz"><p class="caption">Đóng góp các nguồn thải bụi PM<sub>2.5</sub>ở TP.Hồ Chí Minh năm 2017</p><p class="instruction_cap"><span class="nguon_duong">Nguồn đường</span> (Các phương tiện giao thông)<br> <span class="nguon_diem">Nguồn điểm</span> (Các nhà máy sản xuất công nghiệp) <br><span class="nguon_dien">Nguồn diện</span> (Đốt nhiên liệu; hoạt động sản xuất công nghiệp nhỏ lẻ; đốt sinh khối, các nguồn hỗn hợp khác như xây dựng, khai khoáng)</p><div class="flourish-embed" data-src="visualisation/7972528"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div>
+  </div>
+</div>
+</div>
 </div>
 </body>
 <script>
+function appear_bac_tram() {
+  document.getElementById("mien_bac_tram").style.display="grid";
+  document.getElementById("mien_bac").style.display="none";
+}
+function appear_mien_bac() {
+  document.getElementById("mien_bac_tram").style.display="none";
+  document.getElementById("mien_bac").style.display="grid";
+}
+function appear_trung_tram() {
+  document.getElementById("mien_trung_tram").style.display="grid";
+  document.getElementById("mien_trung").style.display="none";
+}
+function appear_mien_trung() {
+  document.getElementById("mien_trung").style.display="grid";
+  document.getElementById("mien_trung_tram").style.display="none";
+}
+function appear_mien_nam() {
+  document.getElementById("mien_nam").style.display="grid";
+  document.getElementById("mien_nam_tram").style.display="none";
+}
+function appear_nam_tram() {
+  document.getElementById("mien_nam_tram").style.display="grid";
+  document.getElementById("mien_nam").style.display="none";
+}
+
+//click nav
+function myFunction(e) {
+    if (document.querySelector('#navbar a.active') !== null) {
+      document.querySelector('#navbar a.active').classList.remove('active');
+    }
+    e.target.className = "active";
+  }
+
 var slideIndex = 1;
 showSlides(slideIndex);
 // Next/previous controls
@@ -478,6 +539,28 @@ function showSlides_dothi(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
+//SLIDE THOAN QUOC THAI
+showSlides_tqthai(slideIndex);
+// Next/previous controls
+function plusSlides_tqthai(n) {
+  showSlides_tqthai(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide_tqthai(n) {
+  showSlides_tqthai(slideIndex = n);
+}
+
+function showSlides_tqthai(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlide_tqthai");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
 
 </script>
 </html>

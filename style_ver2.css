@@ -21,6 +21,64 @@ sub {
   font-size: 1em;
 }
 
+/* nav design */
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  /* background-color: #333; */
+  background-color:orange;
+  z-index: 100;
+  width: 100vw;
+  align-items: center;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+}
+
+#navbar a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1em;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: bold;
+}
+
+#navbar a:hover {
+  /* background-color: #ddd;
+  color: black; */
+  background-color: white;
+  color: orange;
+}
+
+#navbar a.active {
+  /* background-color: #04AA6D; */
+  color: white;
+  background-color: red;
+}
+
+.content {
+  padding: 16px;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
 h1, h2, p {
   font-family: 'Merriweather Sans', sans-serif;
 }
@@ -62,6 +120,7 @@ h1, h2, p {
   margin-right: 10%;
   margin-bottom: 2%;
   font-family: 'Merriweather', serif;
+  line-height: 180%;
 }
 .tq_2020 {
   grid-column: 2 / 3;
@@ -98,6 +157,32 @@ h1, h2, p {
   /* width: 70%; */
   font-family: Merriweather;
   margin-right: 2vw;
+  line-height: 180%;
+}
+
+.tqthai {
+  font-family: Merriweather sans;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  font-size: 1.5em;
+}
+
+.tqthai_map, .tqthai_graph {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.tqthai_map_text, .tqthai_graph_text {
+  grid-column: 1/2;
+  align-self: center;
+}
+.tqthai_map_text p, .tqthai_graph_text p{
+  font-family: Merriweather;
+  line-height: 180%
+}
+.tqthai_map_viz, .tqthai_graph_viz {
+  grid-column: 2/3;
 }
 
 .mien_bac, .mien_bac_tram, .mien_bac_ss {
@@ -116,6 +201,7 @@ h1, h2, p {
   grid-column: 1/2;
   grid-row: 1/2;
   font-family: Merriweather;
+  line-height: 180%;
 }
 .bac_map, .bac_dots, .bac_dots {
   grid-column: 2/3;
@@ -127,14 +213,14 @@ button {
 }
 
 /* slideshow style */
-.slideshow_container_bac, .slideshow_container_trung, .slideshow_container_nam, .hanoi_dsq, .hochiminh_lsq  {
+.slideshow_container_bac, .slideshow_container_trung, .slideshow_container_nam, .hanoi_dsq, .hochiminh_lsq, .tqthai_slideshow_container, .slideshow_container_hanoisk  {
   max-width: 1400px;
   position: relative;
   margin: auto;
 }
 
 /* Hide the images by default */
-.mySlide_bac, .mySlide_trung, .mySlide_nam, .mySlide_dsq_HN, .mySlide_lsq_HCM, .mySlide_dothi {
+.mySlide_bac, .mySlide_trung, .mySlide_nam, .mySlide_dsq_HN, .mySlide_lsq_HCM, .mySlide_dothi, .mySlide_tqthai, .mySlide_hanoi_sk {
   display: none;
 }
 /* Next & previous buttons */
@@ -212,6 +298,7 @@ button {
   grid-row: 1/2;
   grid-column: 1/2;
   align-self: center;
+  line-height: 180%;
 }
 .trung_text p, .trung_tram_text p, .trung_ss_text {
   font-family: Merriweather;
@@ -235,6 +322,7 @@ button {
 .nam_text, .nam_tram_text, .nam_ss_text {
   grid-column: 1/2;
   align-self: center;
+  line-height: 180%;
 }
 
 .nam_text p, .nam_tram_text p, .nam_ss_text p{
@@ -252,7 +340,6 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  /* margin-top: 10px; */
 }
 .hanoi_sub_head, .anh_hanoi {
   grid-column: 1/2;
@@ -276,12 +363,16 @@ button {
   grid-column: 2/3;
 }
 .hanoi_map, .hanoi_tram_map {
-  width: 70%;
+  width: 85%;
+}
+.hanoi_mua_line {
+  width: 115%;
 }
 .hanoi_scene_text, .hanoi_mua_text, .hanoi_tram_text {
   grid-column: 1/2;
   font-family: Merriweather;
   align-self: center;
+  line-height: 180%;
 }
 
 .hanoi_mua_sub {
@@ -307,6 +398,7 @@ button {
   grid-column: 1/2;
   align-self: center;
   font-family: Merriweather;
+  line-height: 180%;
 }
 
 .dsq_diachi_map, .dsq_nam_line, .dsq_thang_line, .dsq_ngay_AQI_line, .dsq_ngay_tuan_line, .dsq_gio_line {
@@ -316,6 +408,54 @@ button {
 .dsq_diachi_map {
   width: 70%;
   justify-self: center;
+}
+
+.hanoithai {
+  font-family: Merriweather sans;
+  font-size: 1.2em;
+  margin-top: 10vh;
+}
+
+.hanoi_thai {
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.hanoi_thai_text {
+  grid-column: 1/2;
+  align-self: center;
+}
+.hanoi_thai_text p {
+  font-family: Merriweather;
+  line-height: 180%;
+}
+.hanoi_thai_viz {
+  grid-column: 2/3;
+}
+
+.hanoi_sk {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.hanoi_sk_text{
+  grid-column: 1/2;
+  align-self: center;
+}
+.hanoi_sk_text p{
+  font-family: Merriweather;
+  line-height: 180%;
+}
+.hanoi_sk_viz{
+  grid-column: 2/3;
+  justify-content: center;
+}
+.hanoi_sk_intro {
+  margin-top: 10vh;
 }
 
 /* Thanh pho Ho chi minh style */
@@ -348,6 +488,7 @@ button {
   grid-column: 1/2;
   font-family: Merriweather;
   align-self: center;
+  line-height: 180%;
 }
 .hochiminh_map, .hochiminh_tram_map, .hochiminh_mua_line{
   grid-column: 2/3;
@@ -355,7 +496,7 @@ button {
 }
 
 .hochiminh_map, .hochiminh_tram_map {
-  width: 50%;
+  width: 80%;
   justify-self: center;
 }
 .hochiminh_tram {
@@ -376,6 +517,7 @@ button {
   grid-column: 1/2;
   font-family: Merriweather;
   align-self: center;
+  line-height: 180%;
 }
 
 .lsq_diachi_map, .lsq_nam_line, .lsq_thang_line, .lsq_ngay_AQI_line, .lsq_ngay_tuan_line, .lsq_gio_line{
@@ -387,6 +529,39 @@ button {
 }
 /* Button style */
 /* adapt from https://codepen.io/chancesq/pen/xxVGbrw, access date: 23/7/2021 */
+.hcm_thai {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.hcm_thai_text {
+  grid-column: 1/2;
+  padding-right: 5vw;
+}
+.hcm_thai_text p{
+  font-family: Merriweather;
+  line-height: 180%;
+}
+.hcm_thai_viz {
+  grid-column: 2/3;
+}
+.nguon_duong{
+  color: #1d6996;
+  font-style: italic;
+}
+.nguon_diem{
+  color: #edad08;
+  font-style: italic;
+}
+.nguon_dien{
+  color:#73af48;
+  font-style: italic;
+}
+.hcmthai {
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
 .noselect {
   -webkit-touch-callout: none;
     -webkit-user-select: none;
